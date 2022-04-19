@@ -1,0 +1,40 @@
+
+---
+# the unmodified sequence to show in the plots
+base_seq: str()
+
+# path to directory with fastq files
+path_to_data_dir: str()
+
+# path to library sequences
+path_to_library_sequences: str()
+
+# bases in sequence reads to include in plots
+sequence_offset: int(min=0)
+expected_len: int(min=0)
+
+# bases to remove from library sequences
+library_exclude_at_start: int(min=0)
+library_exclude_at_end: int(min=0)
+
+# output files
+enriched_sequences_name: str()
+logo_prefix: str()
+matrix_prefix: str()
+logo_postfix: str()
+matrix_postfix: str()
+
+# minimum number of reads per sequence 
+read_threshold_in_input: int(min=0)
+
+# Define which files correspond to which selections.
+file_names:
+    input: any(str(), list(str()))
+    output: map(str(), list(str()), key=str())
+
+# define output samples to aggregate
+aggregate_samples: map(list(str()), key=str(), required=False)
+
+# sequence logo features
+logo_features: map(str(), list(int(), min=3, max=3), key=str())
+
