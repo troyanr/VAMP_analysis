@@ -53,7 +53,7 @@ git clone --recurse-submodules https://github.com/troyanr/VAMP_analysis
 
 2\. Setup the project environment
 ```bash
-cd h1_tiled_library_analysis # navigate to the project directory
+cd VAMP_analysis # navigate to the project directory
 make code # setup project virtual python environment
 ```
 
