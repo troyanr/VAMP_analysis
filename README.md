@@ -45,11 +45,11 @@ python3 --version
 
 # Install the pipeline code
 ```bash
-git clone --recurse-submodules https://github.com/ajmaurais/h1_tiled_library_analysis
+git clone --recurse-submodules https://github.com/troyanr/VAMP_analysis
 ```
 
 # Running the pipeline
-1\. First move the uncompressed `.fastq` files to `h1_tiled_library_analysis/data`
+1\. First move the uncompressed `.fastq` files to `VAMP_analysis/data`
 
 2\. Setup the project environment
 ```bash
