@@ -1,0 +1,68 @@
+
+---
+
+# the unmodified sequence to show in the plots
+base_seq: "AATATTTGCATGTCGCTATGTGTTCTGGGAAATCACCATAAACGTGAAATGTCTTTGGATTTGGGAATCTTATAAGTTCTGTATCAGACCACAGATCCCC"
+
+# path relative to params file to library sequences
+path_to_library_sequences: 'data/library_sequences.csv'
+
+# bases in sequence reads to include in plots
+sequence_offset: 59
+expected_len: 100
+
+# bases to remove from library sequences
+library_exclude_at_start: 25
+library_exclude_at_end: 25
+
+# Minimum number of reads for a sequence to be used
+read_threshold_in_input:  10
+
+# path relative to params file to directory with fastq files
+path_to_data_dir: "data"
+
+# output files
+enriched_sequences_name: 'tables/enriched_sequences.tsv'
+logo_prefix: 'fig/'
+matrix_prefix: 'tables/'
+logo_postfix: 'logo'
+matrix_postfix: 'logo_matrix'
+
+# Define which files correspond to which selections.
+# The input and output selections should be entries in file_names.
+# The input entry should be a pattern of list of file names.
+# The output entries should be maps where each map entry is a replicate.
+# The replicate entry is either a list of literal file names, or a single regular expression. The 
+# regular expression is expanded to include all matching files.
+# The files in the input and output replicate entries are treated as lanes and are combined
+# by concatenating into a single list of sequences.
+file_names:
+    input: 'h1-vamp-lib_S17_L00[1234]_R1_001\.qScoreFiltered\.mismatchFiltered\.txt'
+    output:
+        vamp1: 'h1-vamp1_S1_L00[1234]_R1_001\.qScoreFiltered\.mismatchFiltered\.txt'
+        vamp2:
+            - 'h1-vamp2_S16_L001_R1_001.qScoreFiltered.mismatchFiltered.txt'
+            - 'h1-vamp2_S16_L002_R1_001.qScoreFiltered.mismatchFiltered.txt'
+            - 'h1-vamp2_S16_L003_R1_001.qScoreFiltered.mismatchFiltered.txt'
+            - 'h1-vamp2_S16_L004_R1_001.qScoreFiltered.mismatchFiltered.txt'
+
+# define output samples to aggregate
+aggregate_samples:
+    output:
+        - 'vamp1'
+        - 'vamp2'
+ 
+# sequence logo features
+# colors should be a named matplotlib color or a list of 3 integers representing a RGB color.
+logo_features:
+    'ATTTGCAT':
+        - 247
+        - 245
+        - 174
+    'TCGCTATGTGTTCTGGGAAA': 'violet'
+    'TCACCATAAACGTGAAAT': 'lightcyan'
+    'TATA': 'pink'
+    'CAGACC': 'lightgrey'
+
+
+
