@@ -2,21 +2,21 @@
 ---
 
 # the unmodified sequence to show in the plots
-base_seq: "AATATTTGCATGTCGCTATGTGTTCTGGGAAATCACCATAAACGTGAAATGTCTTTGGATTTGGGAATCTTATAAGTTCTGTATCAGACCACAGATCCCC"
+base_seq: "GGAAACCTGATCATGTAGATCGAACGGACTCTAAATCCGTTCAGCCGGGTTAGATTCCCGGGGTTTCCG"
 
 # path relative to params file to library sequences
 path_to_library_sequences: 'data/library_sequences.csv'
 
 # bases in sequence reads to include in plots
-sequence_offset: 59
-expected_len: 100
+sequence_offset: 39
+expected_len: 69
 
 # bases to remove from library sequences
-library_exclude_at_start: 25
-library_exclude_at_end: 25
+library_exclude_at_start: 30
+library_exclude_at_end: 6
 
 # Minimum number of reads for a sequence to be used
-read_threshold_in_input:  10
+read_threshold_in_input:  4
 
 # path relative to params file to directory with fastq files
 path_to_data_dir: "data"
@@ -37,14 +37,14 @@ matrix_postfix: 'logo_matrix'
 # The files in the input and output replicate entries are treated as lanes and are combined
 # by concatenating into a single list of sequences.
 file_names:
-    input: 'h1-vamp-lib_S17_L00[1234]_R1_001\.qScoreFiltered\.mismatchFiltered\.txt'
+    input: 'pytr-vamp-lib_S12_L00[1234]_R1_001\.qScoreFiltered\.mismatchFiltered\.txt'
     output:
-        vamp1: 'h1-vamp1_S1_L00[1234]_R1_001\.qScoreFiltered\.mismatchFiltered\.txt'
+        vamp1: 'pytr-vamp1_S5_L00[1234]_R1_001\.qScoreFiltered\.mismatchFiltered\.txt'
         vamp2:
-            - 'h1-vamp2_S16_L001_R1_001.qScoreFiltered.mismatchFiltered.txt'
-            - 'h1-vamp2_S16_L002_R1_001.qScoreFiltered.mismatchFiltered.txt'
-            - 'h1-vamp2_S16_L003_R1_001.qScoreFiltered.mismatchFiltered.txt'
-            - 'h1-vamp2_S16_L004_R1_001.qScoreFiltered.mismatchFiltered.txt'
+            - 'pytr-vamp2_S2_L001_R1_001.qScoreFiltered.mismatchFiltered.txt'
+            - 'pytr-vamp2_S2_L002_R1_001.qScoreFiltered.mismatchFiltered.txt'
+            - 'pytr-vamp2_S2_L003_R1_001.qScoreFiltered.mismatchFiltered.txt'
+            - 'pytr-vamp2_S2_L004_R1_001.qScoreFiltered.mismatchFiltered.txt'
 
 # define output samples to aggregate
 aggregate_samples:
@@ -55,14 +55,20 @@ aggregate_samples:
 # sequence logo features
 # colors should be a named matplotlib color or a list of 3 integers representing a RGB color.
 logo_features:
-    'ATTTGCAT':
+    'GGAAACC':
         - 247
         - 245
         - 174
-    'TCGCTATGTGTTCTGGGAAA': 'violet'
-    'TCACCATAAACGTGAAAT': 'lightcyan'
-    'TATA': 'pink'
-    'CAGACC': 'lightgrey'
+    'GGTTTCC':
+        - 247
+        - 245
+        - 174
+    'GATCATGTAGATC': 'violet'
+    'AACGGA': 'lightcyan'
+    'TCCGTT': 'lightcyan'
+    'CCGGG': 'pink'
+    'CCCGG': 'pink'
+ 
 
 
 
