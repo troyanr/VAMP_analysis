@@ -40,7 +40,8 @@ file_names:
     input: 'mapyl-lib_S1_L001_R1_001\.qScoreFiltered\.mismatchFiltered\.txt'
     output:
         vamp1: 'mapyl-out1_S2_L001_R1_001\.qScoreFiltered\.mismatchFiltered\.txt'
-        vamp2: 'mapyl-out2_S3_L001_R1_001.\qScoreFiltered.mismatchFiltered.txt'
+        vamp2:
+            - 'mapyl-out2_S3_L001_R1_001.qScoreFiltered.mismatchFiltered.txt'
 
 # define output samples to aggregate
 aggregate_samples:
