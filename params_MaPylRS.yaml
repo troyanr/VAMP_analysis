@@ -2,18 +2,18 @@
 ---
 
 # the unmodified sequence to show in the plots
-base_seq: "GGAAACCTGATCATGTAGATCGAACGGACTCTAAATCCGTTCAGCCGGGTTAGATTCCCGGGGTTTCCG"
+base_seq: "GGGGGACGGTCCGGCGACCAGCGGGTCTCTAAAACCTAGCCAGCGGGGTTCGACGCCCCGGTCTCTCG"
 
 # path relative to params file to library sequences
 path_to_library_sequences: 'data/library_sequences.csv'
 
 # bases in sequence reads to include in plots
 sequence_offset: 39
-expected_len: 69
+expected_len: 68
 
 # bases to remove from library sequences
-library_exclude_at_start: 30
-library_exclude_at_end: 6
+library_exclude_at_start: 22
+library_exclude_at_end: 29
 
 # Minimum number of reads for a sequence to be used
 read_threshold_in_input:  4
@@ -37,14 +37,10 @@ matrix_postfix: 'logo_matrix'
 # The files in the input and output replicate entries are treated as lanes and are combined
 # by concatenating into a single list of sequences.
 file_names:
-    input: 'pytr-vamp-lib_S12_L00[1234]_R1_001\.qScoreFiltered\.mismatchFiltered\.txt'
+    input: 'mapyl-lib_S1_L001_R1_001\.qScoreFiltered\.mismatchFiltered\.txt'
     output:
-        vamp1: 'pytr-vamp1_S5_L00[1234]_R1_001\.qScoreFiltered\.mismatchFiltered\.txt'
-        vamp2:
-            - 'pytr-vamp2_S2_L001_R1_001.qScoreFiltered.mismatchFiltered.txt'
-            - 'pytr-vamp2_S2_L002_R1_001.qScoreFiltered.mismatchFiltered.txt'
-            - 'pytr-vamp2_S2_L003_R1_001.qScoreFiltered.mismatchFiltered.txt'
-            - 'pytr-vamp2_S2_L004_R1_001.qScoreFiltered.mismatchFiltered.txt'
+        vamp1: 'mapyl-out1_S2_L001_R1_001\.qScoreFiltered\.mismatchFiltered\.txt'
+        vamp2: 'mapyl-out2_S3_L001_R1_001.\qScoreFiltered.mismatchFiltered.txt'
 
 # define output samples to aggregate
 aggregate_samples:
@@ -55,19 +51,19 @@ aggregate_samples:
 # sequence logo features
 # colors should be a named matplotlib color or a list of 3 integers representing a RGB color.
 logo_features:
-    'GGAAACC':
+    'GGGGGAC':
         - 247
         - 245
         - 174
-    'GGTTTCC':
+    'GTCTCTC':
         - 247
         - 245
         - 174
-    'GATCATGTAGATC': 'violet'
-    'AACGGA': 'lightcyan'
-    'TCCGTT': 'lightcyan'
-    'CCGGG': 'pink'
-    'CCCGG': 'pink'
+    'GGTCCGGCGACC': 'violet'
+    'GCGGGT': 'lightcyan'
+    'ACCTAGC': 'lightcyan'
+    'CGGGG': 'pink'
+    'CCCCG': 'pink'
  
 
 
