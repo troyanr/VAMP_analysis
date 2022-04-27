@@ -1,8 +1,8 @@
 ########## Parameters which will need to be edited for each analysis ##########
 
 # Parameters for mismatch and q score filters
-QUERY_OFFSET := --query_offset 34
-EXCLUDE_LEN := --exclude_at_start 29 --exclude_at_end 22
+QUERY_OFFSET := --query_offset 17
+EXCLUDE_LEN := --exclude_at_start 22 --exclude_at_end 29
 FILTER_OPTIONS := $(QUERY_OFFSET) --nThread 1 $(EXCLUDE_LEN)
 MISMATCH_FILTER_OPTIONS := --randomized_length 1
 
