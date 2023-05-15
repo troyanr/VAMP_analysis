@@ -1,13 +1,13 @@
 ########## Parameters which will need to be edited for each analysis ##########
 
 # Parameters for mismatch and q score filters
-QUERY_OFFSET := --query_offset 34
+QUERY_OFFSET := --query_offset 17
 EXCLUDE_LEN := --exclude_at_start 25 --exclude_at_end 25
 FILTER_OPTIONS := $(QUERY_OFFSET) --nThread 1 $(EXCLUDE_LEN)
 MISMATCH_FILTER_OPTIONS := --randomized_length 1
 
 # Starting library sequence
-EXPECTED_SEQUENCE := CCGCCTAGGAGTACGGTCTCGCTCGAATATTTGCATGTCGCTATGTGTTCTGGGAAATCACCATAAACGTGAAATGTCTTTGGATTTGGGAATCTTATAAGTTCTGTATCAGACCACAGATCCCCGGAACGAGACCCGATCCGCTCGCAC
+EXPECTED_SEQUENCE := CTTGTGGAAAGGACGAAACACCGCCCGGATGGTGGAATCGGTAGACACAAGGGATTCTAAATCCCTCGGCGTTCGCGCTGTGCGGGTTCAAGTCCCGCTCCGGGTATTTTTT
 
 # files produced by calculate_enrichment script
 FINAL_DATA := tables/enriched_sequences.tsv
