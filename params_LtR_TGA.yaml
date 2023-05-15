@@ -37,10 +37,10 @@ matrix_postfix: 'logo_matrix'
 # The files in the input and output replicate entries are treated as lanes and are combined
 # by concatenating into a single list of sequences.
 file_names:
-    input: 'LtR-VAMP-lib_R1_001\.qScoreFiltered\.mismatchFiltered\.txt'
+    input: 'LtR-TGA-VAMP-lib_R1_001\.qScoreFiltered\.mismatchFiltered\.txt'
     output:
-        vamp1: 'LtR-S1_R1_001\.qScoreFiltered\.mismatchFiltered\.txt'
-        vamp2: 'LtR-S2_R1_001\.qScoreFiltered\.mismatchFiltered\.txt'
+        vamp1: 'LtR-TGA-S1_R1_001\.qScoreFiltered\.mismatchFiltered\.txt'
+        vamp2: 'LtR-TGA-S2_R1_001\.qScoreFiltered\.mismatchFiltered\.txt'
           
 # define output samples to aggregate
 aggregate_samples:
