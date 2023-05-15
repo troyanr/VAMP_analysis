@@ -2,7 +2,7 @@
 
 # Parameters for mismatch and q score filters
 QUERY_OFFSET := --query_offset 17
-EXCLUDE_LEN := --exclude_at_start 25 --exclude_at_end 25
+EXCLUDE_LEN := --exclude_at_start 22 --exclude_at_end 6
 FILTER_OPTIONS := $(QUERY_OFFSET) --nThread 1 $(EXCLUDE_LEN)
 MISMATCH_FILTER_OPTIONS := --randomized_length 1
 
