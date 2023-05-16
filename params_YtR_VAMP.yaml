@@ -2,14 +2,14 @@
 ---
 
 # the unmodified sequence to show in the plots
-base_seq: "GCCCGGATGGTGGAATCGGTAGACACAAGGGATTCTAAATCCCTCGGCGTTCGCGCTGTGCGGGTTCAAGTCCCGCTCCGGGTA"
+base_seq: "GGTGGGGTTCCCGAGCGGCCAAAGGGAGCAGACTCTAAATCTGCCGTCACAGACTTCGAAGGTTCGAATCCTTCCCCCACCA"
 
 # path relative to params file to library sequences
 path_to_library_sequences: 'data/library_sequences.csv'
 
 # bases in sequence reads to include in plots
 sequence_offset: 39
-expected_len: 84
+expected_len: 82
 
 # bases to remove from library sequences
 library_exclude_at_start: 22
@@ -37,10 +37,10 @@ matrix_postfix: 'logo_matrix'
 # The files in the input and output replicate entries are treated as lanes and are combined
 # by concatenating into a single list of sequences.
 file_names:
-    input: 'LtR-VAMP-lib_R1_001\.qScoreFiltered\.mismatchFiltered\.txt'
+    input: 'YtR-VAMP-lib_R1_001\.qScoreFiltered\.mismatchFiltered\.txt'
     output:
-        vamp1: 'LtR-S1_R1_001\.qScoreFiltered\.mismatchFiltered\.txt'
-        vamp2: 'LtR-S2_R1_001\.qScoreFiltered\.mismatchFiltered\.txt'
+        vamp1: 'YtR-S1_R1_001\.qScoreFiltered\.mismatchFiltered\.txt'
+        vamp2: 'YtR-S2-ZH_R1_001\.qScoreFiltered\.mismatchFiltered\.txt'
           
 # define output samples to aggregate
 aggregate_samples:
@@ -51,19 +51,19 @@ aggregate_samples:
 # sequence logo features
 # colors should be a named matplotlib color or a list of 3 integers representing a RGB color.
 logo_features:
-    'GCCCGGA':
+    'GGTGGGG':
         - 247
         - 245
         - 174
-    'TCCGGGT':
+    'CCCCACC':
         - 247
         - 245
         - 174
-    'GTGGAATCGGTAGACAC': 'violet'
-    'AGGGA': 'lightcyan'
-    'TCCCT': 'lightcyan'
-    'GCGGG': 'pink'
-    'CCCGC': 'pink'
+    'CCCGAGCGGCCAAAGGG': 'violet'
+    'GCAGA': 'lightcyan'
+    'TCTGC': 'lightcyan'
+    'GAAGG': 'pink'
+    'CCTTC': 'pink'
  
 
 
