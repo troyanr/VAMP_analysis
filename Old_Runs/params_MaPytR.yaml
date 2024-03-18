@@ -2,7 +2,7 @@
 ---
 
 # the unmodified sequence to show in the plots
-base_seq: "GGGGGACGGTCCGGCGACCAGCGGGTCTCTAAAACCTAGCCAGCGGGGTTCGACGCCCCGGTCTCTCG
+base_seq: "GGGGGACGGTCCGGCGACCAGCGGGTCTCTAAAACCTAGCCAGCGGGGTTCGACGCCCCGGTCTCTCG"
 
 # path relative to params file to library sequences
 path_to_library_sequences: 'data/library_sequences.csv'
