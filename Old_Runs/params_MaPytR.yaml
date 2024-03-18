@@ -40,8 +40,7 @@ file_names:
     input: '890805-1_S4_L001_R1_001\.qScoreFiltered\.mismatchFiltered\.txt'
     output:
         vamp1: '890805-2_S5_L001_R1_001\.qScoreFiltered\.mismatchFiltered\.txt'
-        vamp2:
-            - '890805-3_S6_L001_R1_001.qScoreFiltered.mismatchFiltered.txt'
+        vamp2: '890805-3_S6_L001_R1_001\.qScoreFiltered\.mismatchFiltered\.txt'
 
 # define output samples to aggregate
 aggregate_samples:
